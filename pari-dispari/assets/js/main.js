@@ -6,22 +6,33 @@
 // Dichiariamo chi ha vinto
 
 
-const player_bet = true
-const player_number = 3
-const computer_number = 7 // Math.floor(Math.random() * 5) + 1;
 
-const sum_number_even_odd = (player_number + computer_number) % 2 == 0
+function odd_even_game(player_bet, player_number) {
 
-console.log(sum_number_even_odd)
+    const computer_number = Math.floor(Math.random() * 5) + 1;
 
-
-if () {
+    const sum_numbers_even = (player_number + computer_number) % 2 == 0;
+    
 
 
-} else {
+    if ((sum_numbers_even && player_bet == 'even') || (!sum_numbers_even && player_bet == 'odd')) {
 
+        document.writeln('You win');
+
+    } else {
+
+        document.writeln('You lost');
+
+    }
+
+    console.log(player_bet, player_number, computer_number, sum_numbers_even)
 
 }
+
+odd_even_game(prompt('Place your bet, write "even" or "odd"'), Number(prompt('Choose a number from 1 to 5')));
+
+
+
 
 
 
