@@ -13,15 +13,13 @@ function odd_even_game(player_bet, player_number) {
 
     const sum_numbers_even = (player_number + computer_number) % 2 == 0;
     
-
-
     if ((sum_numbers_even && player_bet == 'even') || (!sum_numbers_even && player_bet == 'odd')) {
 
-        document.writeln('You win');
+        document.writeln('YOU WIN');
 
     } else {
 
-        document.writeln('You lost');
+        document.writeln('YOU LOST');
 
     }
 
@@ -30,23 +28,3 @@ function odd_even_game(player_bet, player_number) {
 }
 
 odd_even_game(prompt('Place your bet, write "even" or "odd"'), Number(prompt('Choose a number from 1 to 5')));
-
-
-
-
-
-
-
-// let numberRandomWinner;
-// const numberRandomHuman = Math.floor(Math.random() * 6) + 1;
-// const numberRandomComputer = Math.floor(Math.random() * 6) + 1;
-
-// if (numberRandomHuman > numberRandomComputer) {
-//     numberRandomWinner = 'The Human wins'
-// } else if (numberRandomComputer > numberRandomHuman) {
-//     numberRandomWinner = 'The Computer wins'
-// } else {
-//     numberRandomWinner = 'Draw'
-// }
-
-// console.log(`Human ${numberRandomHuman} - ${numberRandomComputer} Computer, ${numberRandomWinner}`)
